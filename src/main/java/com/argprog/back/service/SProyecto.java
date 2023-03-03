@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class SProyecto {
     
     @Autowired
-    public RProyecto proyeRepo;
+     RProyecto proyeRepo;
 
     public List<Proyecto> listarProyecto() {
         return proyeRepo.findAll();

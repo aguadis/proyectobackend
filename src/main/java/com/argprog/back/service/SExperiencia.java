@@ -17,8 +17,8 @@ public class SExperiencia {
         return expeRepo.findAll();
     }
 
-    public void crearExperiencia(Experiencia expe) {
-        expeRepo.save(expe);
+    public Experiencia crearExperiencia(Experiencia expe) {
+       return expeRepo.save(expe);
     }
 
     public void borrarExperiencia(int id) {
@@ -29,8 +29,8 @@ public class SExperiencia {
         return expeRepo.findById(id).orElse(null);
     }
 
-    public void modificarExperiencia(Experiencia expe) {
-         expeRepo.save(expe);
+    public Experiencia modificarExperiencia(Experiencia expe) {
+        return expeRepo.save(expe);
     }
 
    

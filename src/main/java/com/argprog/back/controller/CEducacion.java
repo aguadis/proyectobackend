@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200"})// la ruta se cruza con angular
+@CrossOrigin(origins = {"http://portfoliocintianecol.web.app"})// la ruta se cruza con angular
+
 public class CEducacion {
     @Autowired
     SEducacion eduServ;
@@ -41,7 +42,7 @@ public class CEducacion {
     eduServ.borrarEducacion(id);
     }
     
-    @GetMapping("/Educacion{id}")
+    @GetMapping("/educacion/{id}")
     @ResponseBody
     public Educacion buscarEducacionPorId(@PathVariable int id){
     return eduServ.buscarEducacionPorId(id);

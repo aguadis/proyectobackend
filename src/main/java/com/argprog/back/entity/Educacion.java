@@ -1,11 +1,12 @@
 package com.argprog.back.entity;
 
 import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import java.util.Date;
+import jakarta.persistence.Lob;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,17 +19,22 @@ public class Educacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
      int id;
     @Basic
+            @Lob
+    @Column(name = "nivel", length = 800)
      String nivel;
-     Date inicio;
-     Date fin;
-     String estudio;
+     private String inicio;
+     private String fin;
+     
+     @Lob
+    @Column(name = "estudio", length = 800)
+     private String estudio;
    //alt + insert constructor
 
         public Educacion(){
         }
 
-    public Educacion(int id, String nivel, Date inicio, Date fin, String estudio) {
-        this.id = id;
+    public Educacion(String nivel, String inicio, String fin, String estudio) {
+        
         this.nivel = nivel;
         this.inicio = inicio;
         this.fin = fin;

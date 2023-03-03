@@ -17,8 +17,9 @@ public class SHabilidad {
         return habiRepo.findAll();
        }
 
-    public void crearHabilidad(Habilidad habi) {
-        habiRepo.save(habi);
+    public Habilidad crearHabilidad(Habilidad habi) {
+       return habiRepo.save(habi);
+        
     }
 
     public void borrarHabilidad(int id) {

@@ -1,11 +1,13 @@
 
 package com.argprog.back.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import java.util.Date;
+import jakarta.persistence.Lob;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,18 +16,24 @@ import lombok.Setter;
 public class Experiencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-     
      int id;
-     String trabajo;
-     Date inicio;
-     String puesto;
+    
+    @Lob
+    @Column(name = "trabajo", length = 800)
+    private String trabajo;
+    
+    
+    private String inicio;
+    
+    @Lob
+    @Column(name = "puesto", length = 800)
+     private String puesto;
    //alt + insert constructor
 
     public Experiencia() {
     }
 
-    public Experiencia(int id, String trabajo, Date inicio, String puesto) {
-        this.id = id;
+    public Experiencia(String trabajo, String inicio, String puesto) {
         this.trabajo = trabajo;
         this.inicio = inicio;
         this.puesto = puesto;
