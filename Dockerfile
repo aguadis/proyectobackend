@@ -1,6 +1,6 @@
 FROM amazoncorretto:17-alpine-jdk
 
-MAINTAINER cintianecol
+MAINTAINER emaaristimuno
 
 COPY target/back-0.0.1-SNAPSHOT.jar back-0.0.1-SNAPSHOT.jar
 
