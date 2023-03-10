@@ -45,15 +45,11 @@
 	 <dependency>
 	  <groupId>org.projectlombok</groupId>
 	  <artifactId>lombok</artifactId>
-	  <optional>true</optional>
-	 </dependency>
-	<dependency>
-	  <groupId>jakarta.persistence</groupId>
-	  <artifactId>jakarta.persistence-api</artifactId>
-	  <version>3.1.0</version>
+	  <version>1.18.24</version>
 	  <type>jar</type>
 	 </dependency>
-          </dependencies>
+	 </dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
