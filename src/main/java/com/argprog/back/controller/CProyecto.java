@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
  @RestController
-@CrossOrigin(origins = {"http://portfoliocintianecol.web.app"})// la ruta se cruza con angularpackage com.argprog.back.controller;
+@CrossOrigin(origins = {"http://portfoliocintianecol.web.app/"})// la ruta se cruza con angularpackage com.argprog.back.controller;
 
 public class CProyecto {
    @Autowired
@@ -40,7 +40,7 @@ public class CProyecto {
     proyeServ.borrarProyecto(id);
     }
     
-    @GetMapping("/Proyecto{id}")
+    @GetMapping("/Proyecto/{id}")
     @ResponseBody
     public Proyecto buscarProyectoPorId(@PathVariable int id){
     return proyeServ.buscarProyectoPorId(id);

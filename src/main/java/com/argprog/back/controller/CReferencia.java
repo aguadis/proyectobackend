@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@CrossOrigin(origins = {"http://portfoliocintianecol.web.app"})// la ruta se cruza con angularpackage com.argprog.back.controller;
+@CrossOrigin(origins = {"http://portfoliocintianecol.web.app/"})// la ruta se cruza con angularpackage com.argprog.back.controller;
 
 
 public class CReferencia {
@@ -42,7 +42,7 @@ public class CReferencia {
     refeServ.borrarReferencia(id);
     }
     
-    @GetMapping("/referencia{id}")
+    @GetMapping("/referencia/{id}")
     @ResponseBody
     public Referencia buscarReferenciaPorId(@PathVariable int id){
     return refeServ.buscarReferenciaPorId(id);
