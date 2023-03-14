@@ -17,6 +17,7 @@ com\argprog\back\controller\CReferencia.class
 com\argprog\back\controller\CEducacion.class
 com\argprog\back\entity\Contacto.class
 com\argprog\back\controller\CContacto.class
+com\argprog\back\CorsFilter.class
 com\argprog\back\entity\Red.class
 com\argprog\back\repository\REducacion.class
 com\argprog\back\repository\RHabilidad.class
