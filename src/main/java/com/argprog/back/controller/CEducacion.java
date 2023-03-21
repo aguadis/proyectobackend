@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@CrossOrigin(origins = {"http://portfoliocintianecol.web.app"})// la ruta se cruza con angular
+@CrossOrigin(origins = "http://portfoliocintianecol.web.app")// la ruta se cruza con angular
 
 public class CEducacion {
     @Autowired
